@@ -1,0 +1,91 @@
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.square {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+}
+
+.player1, .player2 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+  z-index: 1;
+}
+
+.player2 {
+  background-color: blue;
+}
+
+.ladder {
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  background-color: brown;
+  z-index: 0;
+  transform: rotate(45deg);
+}
+
+.snake {
+  position: absolute;
+  width: 50px;
+  height: 10px;
+  background-color: yellow;
+  z-index: 0;
+  transform: rotate(-45deg);
+}
+
+.pos {
+  position: absolute;
+  bottom: 5px;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.current-player, .dice-roll, .message, .winner {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.winner {
+  color: green;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #bbb;
+  cursor: default;
+}
